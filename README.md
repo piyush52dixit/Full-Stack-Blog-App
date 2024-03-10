@@ -19,7 +19,6 @@ Welcome to the Full-Stack-Blog-App! This feature-rich web application is designe
 - **HTML, CSS, JavaScript (React.js)**: Building the user interface and interactivity.
 - **React Router**: Declarative routing for React applications.
 - **React Quill**: Rich text editor for creating and editing blog posts.
-- **Axios**: Promise-based HTTP client for handling backend communication.
 - **Sass**: CSS preprocessor for enhanced styling.
 
 ### Backend
