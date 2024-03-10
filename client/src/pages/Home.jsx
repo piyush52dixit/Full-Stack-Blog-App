@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const posts = [
   {
@@ -27,23 +28,29 @@ const posts = [
   },
 ];
 
-const Menu = () => {
+const Home = () => {
   return (
-    <div className="menu">
-      <h1>Other posts you may like</h1>
-      {posts.map((post) => {
-        return (
-          <>
+    <div className="home">
+      <div className="posts">
+        {posts.map((post) => {
+          return (
             <div className="post" key={post.id}>
-              <img src={post.img} alt="" />
-              <h2>{post.title}</h2>
-              <button>Read More...</button>
+              <div className="img">
+                <img src={post.img} alt="" />
+              </div>
+              <div className="content">
+                <Link className="link " to={`/post/${post.id}`}>
+                  <h1>{post.title}</h1>
+                </Link>
+                <p>{post.desc}</p>
+                <button>Read More</button>
+              </div>
             </div>
-          </>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-export default Menu;
+export default Home;
